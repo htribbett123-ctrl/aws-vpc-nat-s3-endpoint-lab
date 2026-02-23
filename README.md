@@ -5,7 +5,7 @@ This project documents a full hands‑on AWS networking lab where I built a cust
 
 ---
 
-## 🏗️ AWS Architecture Diagram (Official AWS Icon Style)
+## 🏗️ AWS Architecture Diagram 
 
 This lab uses a production-style AWS network design built with official AWS architecture standards:
 
