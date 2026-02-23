@@ -28,6 +28,8 @@ This lab uses a production-style AWS network design built with official AWS arch
 - Private EC2 → S3 Endpoint → S3 (no NAT required)  
 - Laptop → IGW → Bastion → Private EC2 (SSH)
 
+  ![AWS Architecture Diagram](screenshots/VPC Diagram Architecture.png)
+
 ----
 
 ## 📌 Architecture Overview
