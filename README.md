@@ -5,6 +5,31 @@ This project documents a full hands‑on AWS networking lab where I built a cust
 
 ---
 
+## 🏗️ AWS Architecture Diagram (Official AWS Icon Style)
+
+This lab uses a production-style AWS network design built with official AWS architecture standards:
+
+- **VPC (10.0.0.0/16)**
+  - Public Subnet (10.0.1.0/24)
+    - EC2 Bastion Host (PublicWebServer)
+    - NAT Gateway (with Elastic IP)
+    - Public Route Table:
+      - 0.0.0.0/0 → Internet Gateway
+  - Private Subnet (10.0.2.0/24)
+    - EC2 Private Instance (PrivateWebServer)
+    - Private Route Table:
+      - 0.0.0.0/0 → NAT Gateway
+      - com.amazonaws.us-east-1.s3 → S3 Gateway Endpoint
+- **Internet Gateway** attached to the VPC
+- **S3 VPC Gateway Endpoint** for private S3 access
+
+### Traffic Flows
+- Private EC2 → NAT Gateway → Internet  
+- Private EC2 → S3 Endpoint → S3 (no NAT required)  
+- Laptop → IGW → Bastion → Private EC2 (SSH)
+
+----
+
 ## 📌 Architecture Overview
 
 This lab includes:
